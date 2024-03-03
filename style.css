@@ -54,11 +54,14 @@ text-align: center;
 .napok{
 	text-align: center;
     border: 1px solid #070707;
-    width: 13vw;
-    height: 15rem;
+    width: auto;
+    height: auto;
 }
 .hnap-cont{
 	display: flex;
-	margin-left: 05vw;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: -23px;
+	
 }
