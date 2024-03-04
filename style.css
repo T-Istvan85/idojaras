@@ -50,6 +50,7 @@ text-align: center;
 .idojaras-cont {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	width: auto;
 }
 .napok{
 	text-align: center;
