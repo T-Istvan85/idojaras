@@ -1,7 +1,7 @@
 
 async function ido(varosadat) {
   let ido = document.querySelector(".idojaras-tabela");
-        ido.classList.remove("hidden")
+  ido.classList.remove("hidden")
   fetch(
     "https://api.open-meteo.com/v1/forecast?latitude=" +
     varosadat.results[0].latitude +
@@ -13,14 +13,13 @@ async function ido(varosadat) {
     .then((adat) => {
 
       adat.daily.time.forEach(function (time, index) {
-        
-        let ido1 = ido.rows[0].cells[index];
-        let ido2 = ido.rows[1].cells[index];
-        let ido3 = ido.rows[2].cells[index];
-        let ido4 = ido.rows[3].cells[index];
-        let ido5 = ido.rows[4].cells[index];
-        let ido6 = ido.rows[5].cells[index];
 
+        let ido1 = ido.rows[index].cells[0];
+        let ido2 = ido.rows[index].cells[1];
+        let ido3 = ido.rows[index].cells[2];
+        let ido4 = ido.rows[index].cells[3];
+        let ido5 = ido.rows[index].cells[4];
+        let ido6 = ido.rows[index].cells[5];
 
         let datum = time;
         let tempmax =
@@ -58,12 +57,7 @@ async function ido(varosadat) {
         ido4.replaceChild(szelse, ido4.childNodes[0]);
         ido5.replaceChild(csapva, ido5.childNodes[0]);
         ido6.replaceChild(csapme, ido6.childNodes[0]);
-
-
       });
-
-
-
     });
 }
 document.querySelector("#lekerdgomb").addEventListener("click", function () {
@@ -72,7 +66,6 @@ document.querySelector("#lekerdgomb").addEventListener("click", function () {
     .then((valasz) => valasz.json())
     .then((varosadat) => {
       let varosok = document.getElementById("varos");
-      
 
       if (Array.isArray(varosadat.results) && varosadat.results.length > 0) {
         varosok.innerText = varosadat.results[0].name;
@@ -82,6 +75,5 @@ document.querySelector("#lekerdgomb").addEventListener("click", function () {
         varosok.innerText = "nincs ilyen város"
       }
     });
-    
 });
 
