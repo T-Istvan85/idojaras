@@ -9,9 +9,11 @@
   </head>
   <body>
     <h1 class="cim">IDŐJÁRÁS ELŐREJELZÉS <span id="varos"></span></h1>
-
+    <section class="kereses-cont">
     <input type="text" id="varos-kereses" onfocus="this.value=''" />
-    <button id="lekerdgomb">Lekérdez</button>
+    <button id="lekerdgomb">Város keresés</button>
+    <button onclick="gpsido()">Jelenlegi pozícióm</button>
+    </section>
     <table class="idojaras-tabela hidden">
       <tr>
         <td>.</td>

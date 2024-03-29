@@ -131,9 +131,28 @@ table {
 .cim {
   text-align: center;
   color: aliceblue;
-  text-shadow: black 2px 2px 2px;
+  text-shadow: 2px 2px 2px black;
 }
-
+.kereses-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+ 
+}
+input{
+  width: 15rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  
+}
+button{
+  cursor: pointer;
+  width: 11rem;
+  height: 2rem;
+  font-size:medium;
+  margin-bottom: 0.5rem;
+}
 
 .idojaras-tabela.hidden {
   visibility: hidden;
@@ -145,49 +164,46 @@ table {
   margin-right: auto;
   visibility: visible;
 }
-tr{
-  display:flex;
-    flex-direction: column;
-    margin-top: 1rem;
+tr {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
-td{
-  background: rgba(0,0,255,0.3);
+td {
+  background: rgba(0, 0, 255, 0.3);
   color: aliceblue;
   padding: 0.5rem;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 tr td {
   border: 1px solid rgb(247, 244, 244);
 }
 
-
 /*pc képernyő méret*/
 @media only screen and (min-width: 814px) {
-tr td {
+  tr td {
     border: 1px solid rgb(248, 246, 246);
   }
   .idojaras-tabela.hidden {
     visibility: hidden;
   }
-  .idojaras-tabela{
+  .idojaras-tabela {
     margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
-  tr{
+  tr {
     display: flex;
     flex-direction: row;
   }
-  td{
+  td {
     font-size: 1.3rem;
     text-align: center;
-   width: 13vw;
+    width: 13vw;
     padding: 1vw;
   }
-  
 
   .idojaras-tabela {
-    
     visibility: visible;
   }
 }
